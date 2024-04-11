@@ -7,7 +7,6 @@ function showSection(sectionId) {
   const selectedSection = document.getElementById(sectionId);
   if (selectedSection) {
     selectedSection.classList.add("active"); // Show selected section
-    selectedSection.style.animation = "fadeIn 1s ease-in"; // Apply fade-in animation
   }
 }
 
