@@ -2,16 +2,18 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Basic styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  background-color: #eaeaea; /* Lighter background for better contrast */
 }
 
-header {
-  background-color: #333;
+header, footer {
+  background-color: #005f73; /* Deep teal background */
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -33,21 +35,48 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+nav ul li a:hover {
+  background-color: #0a9396; /* Teal background on hover */
+  padding: 5px 10px; /* Add padding for visual effect */
+  border-radius: 3px; /* Rounded corners for links */
+}
+
+main {
+  padding: 20px;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.container:hover {
+  transform: translateY(-10px); /* Slight raise effect on hover */
 }
 
 .section {
-  display: none; /* Hide all sections by default */
+  display: none;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+.section.active {
+  display: block; /* Show active section */
+  animation: fadeIn 1s ease-in; /* Fade in effect for active section */
+}
+
+.project h3 {
+  color: #94d2bd; /* Soft teal color for headings */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
