@@ -9,14 +9,16 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #eaeaea; /* Lighter background for better contrast */
+  background-color: #f8f9fa; /* Lighter background for better contrast */
 }
 
-header, footer {
-  background-color: #005f73; /* Deep teal background */
+header {
+  background-color: #343a40; /* Dark background for header */
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  border-bottom-left-radius: 20px; /* Curved bottom left corner */
+  border-bottom-right-radius: 20px; /* Curved bottom right corner */
 }
 
 header h1 {
@@ -39,7 +41,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #0a9396; /* Teal background on hover */
+  background-color: #6c757d; /* Darker background on hover */
   padding: 5px 10px; /* Add padding for visual effect */
   border-radius: 3px; /* Rounded corners for links */
 }
@@ -50,17 +52,16 @@ main {
 
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 20px auto 0; /* Added margin top to separate from header */
   padding: 20px;
   background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Curved corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .container:hover {
   transform: translateY(-10px); /* Slight raise effect on hover */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .section {
@@ -69,29 +70,22 @@ main {
 
 .section.active {
   display: block; /* Show active section */
-  animation: fadeIn 1s ease-in, popIn 0.5s ease-in-out; /* Fade in effect and pop in effect for active section */
+  animation: fadeInUp 1s ease-in-out; /* Fade-in animation for active section */
 }
 
 .project h3 {
-  color: #94d2bd; /* Soft teal color for headings */
+  color: #007bff; /* Professional blue color for headings */
+}
+
+/* Image styles */
+#front .container img {
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 20px 20px 0 0; /* Curved top corners */
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes popIn {
-  from { transform: scale(0); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-/* Click Effects */
-nav ul li a:active {
-  transform: scale(0.9); /* Slight shrink effect on click */
-}
-
-.container:active {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on click */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
