@@ -60,6 +60,7 @@ main {
 
 .container:hover {
   transform: translateY(-10px); /* Slight raise effect on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .section {
@@ -68,7 +69,7 @@ main {
 
 .section.active {
   display: block; /* Show active section */
-  animation: fadeIn 1s ease-in; /* Fade in effect for active section */
+  animation: fadeIn 1s ease-in, popIn 0.5s ease-in-out; /* Fade in effect and pop in effect for active section */
 }
 
 .project h3 {
@@ -79,4 +80,18 @@ main {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Click Effects */
+nav ul li a:active {
+  transform: scale(0.9); /* Slight shrink effect on click */
+}
+
+.container:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on click */
 }
