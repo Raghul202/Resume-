@@ -84,8 +84,28 @@ main {
   border-radius: 20px 20px 0 0; /* Curved top corners */
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Additional styles */
+#Certificate .container ul {
+  padding: 0; /* Remove default padding for list */
+  list-style: none; /* Remove list bullet points */
+}
+
+#Certificate .container ul li {
+  margin-bottom: 10px; /* Add spacing between certificate items */
+}
+
+/* Button styles */
+button {
+  background-color: #007bff; /* Professional blue color */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px; /* Curved corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px; /* Add space between text and button */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
 }
